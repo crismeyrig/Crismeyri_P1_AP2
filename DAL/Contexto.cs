@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Crismeyri_P1_AP2.Models;
+//using Crismeyri_P1_AP2.Models;
 
 namespace Crismeyri_P1_AP2.DAL
 {
