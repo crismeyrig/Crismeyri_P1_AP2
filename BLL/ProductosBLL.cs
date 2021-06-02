@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Crismeyri_P1_AP2.Models;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Crismeyri_P1_AP2.DAL;
+using Crismeyri_P1_AP2.Models;
 
 
 
@@ -53,7 +53,7 @@ namespace Crismeyri_P1_AP2.BLL
             return paso;
         }
 
-        public static Modificar (Productos productos)
+        public static bool Modificar (Productos productos)
         {
             bool paso = false;
             Contexto db = new Contexto();
@@ -110,7 +110,7 @@ namespace Crismeyri_P1_AP2.BLL
         }
         public static Productos Buscar(int id)
         {
-            Contexto DB = new Contexto();
+            Contexto db = new Contexto();
             Productos productos;
 
             try
@@ -123,12 +123,13 @@ namespace Crismeyri_P1_AP2.BLL
             }
             finally
             {
-                DB.Dispose();
+                db.Dispose();
             }
             return productos;
         }
         public static List<Productos> GetPersonas()
         {
+            List<Productos> lista = new List<Productos>();
             Contexto db = new Contexto();
             try
             {
