@@ -1,5 +1,5 @@
-﻿@page "/Productos"
-@page "/Productos/{ProductoId:int}"
+﻿@page "/RProductos"
+@page "/RProductos/{ProductoId:int}"
 
 @using Crismeyri_P1_AP2.Models;
 @using Crismeyri_P1_AP2.BLL;
@@ -85,9 +85,11 @@
     private Productos productos = new Productos();
 
     protected override void OnInitialized()
-    {
-        Nuevo();
-        Buscar();
+    { 
+        if (ProductoId > 0)
+        {
+            productos = ProductosBLL.Buscar(ProductoId);
+        }
     }
 
     private void CalcularValorInventario()

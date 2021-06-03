@@ -95,20 +95,23 @@
         Actualizar();
     }
 
-    
+
     void Actualizar()
     {
         Productos = ProductosBLL.GetList(p => true).ToList();
         Filtro = Productos;
     }
 
-   
+
+
     void Editar(int id)
     {
         Nav.NavigateTo($"RProductos/{id}");
+
+
     }
 
- 
+
     async Task Eliminar(int id)
     {
         Nav.ToAbsoluteUri($"RProductos/{id}");
