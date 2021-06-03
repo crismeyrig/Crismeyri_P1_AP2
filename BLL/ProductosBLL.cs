@@ -127,7 +127,7 @@ namespace Crismeyri_P1_AP2.BLL
             }
             return productos;
         }
-        public static List<Productos> GetPersonas()
+        public static List<Productos> GetProductos()
         {
             List<Productos> lista = new List<Productos>();
             Contexto db = new Contexto();
